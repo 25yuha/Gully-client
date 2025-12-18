@@ -14,6 +14,7 @@ public class GullyClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+
 		this.featureManager = new FeatureManager();
 	}
 }

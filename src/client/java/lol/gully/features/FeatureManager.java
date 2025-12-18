@@ -14,7 +14,7 @@ public class FeatureManager {
 
     public FeatureManager(){
         features.add(new Watermark());
-        //features.add(new Keystrokes());
+        features.add(new Keystrokes());
 
         this.RegisterEvents();
     }
