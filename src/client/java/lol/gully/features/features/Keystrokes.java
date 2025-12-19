@@ -7,6 +7,7 @@ import lol.gully.features.FeatureCategory;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElement;
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 
 public class Keystrokes extends Feature {
@@ -34,9 +35,16 @@ public class Keystrokes extends Feature {
             int topRectangleY = positionY + margin;
             int topRectangleWidth = boxSize;
             int topRectangleHeight = boxSize;
+
+
+
             // x1,y2, x2,y2,color
 
-            drawContext.fill(topRectangleX, topRectangleY, topRectangleX + topRectangleWidth, topRectangleY + topRectangleHeight, 0xFFFFFFFF);
+            if(Minecraft.getInstance().options.keyUp.isDown()){
+                drawContext.fill(topRectangleX, topRectangleY, topRectangleX + topRectangleWidth, topRectangleY + topRectangleHeight, 0xBF000000);
+            } else {
+                drawContext.fill(topRectangleX, topRectangleY, topRectangleX + topRectangleWidth, topRectangleY + topRectangleHeight, 0x80000000);
+            }
 
             // A
 
@@ -47,10 +55,10 @@ public class Keystrokes extends Feature {
             // x1,y2, x2,y2,color
 
             if(Minecraft.getInstance().options.keyLeft.isDown()){
-                System.out.println("LEFT KEY PRESSED");
+                drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + leftRectangleWidth, leftRectangleY + leftRectangleHeight, 0xBF000000);
+            } else {
+                drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + leftRectangleWidth, leftRectangleY + leftRectangleHeight, 0x80000000);
             }
-
-            drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + leftRectangleWidth, leftRectangleY + leftRectangleHeight, 0xFF000000);
 
 
             // S
@@ -61,7 +69,12 @@ public class Keystrokes extends Feature {
             int middleRectangleHeight = boxSize;
             // x1,y2, x2,y2,color
 
-            drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + middleRectangleWidth, middleRectangleY + middleRectangleHeight, 0xFF000000);
+            if(Minecraft.getInstance().options.keyDown.isDown()){
+                drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + middleRectangleWidth, middleRectangleY + middleRectangleHeight, 0xBF000000);
+            } else {
+                drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + middleRectangleWidth, middleRectangleY + middleRectangleHeight, 0x80000000);
+            }
+
 
             // D
 
@@ -71,10 +84,18 @@ public class Keystrokes extends Feature {
             int rightRectangleHeight = boxSize;
             // x1,y2, x2,y2,color
 
-            drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + rightRectangleWidth, rightRectangleY + rightRectangleHeight, 0xFF000000);
+
+            if(Minecraft.getInstance().options.keyRight.isDown()){
+                drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + rightRectangleWidth, rightRectangleY + rightRectangleHeight, 0xBF000000);
+            } else {
+                drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + rightRectangleWidth, rightRectangleY + rightRectangleHeight, 0x80000000);
+            }
 
 
         };
+
+
+
     }
 
 }

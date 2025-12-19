@@ -9,19 +9,19 @@ import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 
-public class Watermark extends Feature {
-    public Watermark() {
-        super("Watermark", FeatureCategory.UTILITY);
+public class Test extends Feature {
+    public Test() {
+        super("Test", FeatureCategory.DEVELOPER);
     }
 
     @Override
     public void EventRegister() {
-        HudElementRegistry.addLast(ResourceLocation.fromNamespaceAndPath(GullyClient.MOD_ID, "last_element"), hudLayer());
+        HudElementRegistry.addLast(ResourceLocation.fromNamespaceAndPath(GullyClient.MOD_ID, "last_element3"), hudLayer());
     }
 
     private HudElement hudLayer(){
         return (drawContext, tickCounter) -> {
-            drawContext.drawString(Minecraft.getInstance().font, "Gully client (better than lunar edition)", 10, 10, ColorUtil.getRainboxColor(1), true);
+
         };
     }
 
