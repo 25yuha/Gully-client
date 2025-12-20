@@ -1,6 +1,7 @@
 package lol.gully.features;
 
 import lol.gully.features.features.Keystrokes;
+import lol.gully.features.features.Test;
 import lol.gully.features.features.Watermark;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class FeatureManager {
     public FeatureManager(){
         features.add(new Watermark());
         features.add(new Keystrokes());
+        features.add(new Test());
 
         this.RegisterEvents();
     }

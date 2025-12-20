@@ -21,7 +21,7 @@ public class Watermark extends Feature {
 
     private HudElement hudLayer(){
         return (drawContext, tickCounter) -> {
-            drawContext.drawString(Minecraft.getInstance().font, "Gully client (better than lunar edition)", 10, 10, ColorUtil.getRainboxColor(1), true);
+            drawContext.drawString(Minecraft.getInstance().font, "Gully client", 10, 10, ColorUtil.getRainboxColor(1), true);
         };
     }
 

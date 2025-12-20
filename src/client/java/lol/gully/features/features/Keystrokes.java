@@ -30,65 +30,45 @@ public class Keystrokes extends Feature {
         return (drawContext, tickCounter) -> {
 
 
-            // W
+
             int topRectangleX = positionX + margin + boxSize + margin;
             int topRectangleY = positionY + margin;
-            int topRectangleWidth = boxSize;
-            int topRectangleHeight = boxSize;
-
-
-
-            // x1,y2, x2,y2,color
 
             if(Minecraft.getInstance().options.keyUp.isDown()){
-                drawContext.fill(topRectangleX, topRectangleY, topRectangleX + topRectangleWidth, topRectangleY + topRectangleHeight, 0xBF000000);
+                drawContext.fill(topRectangleX, topRectangleY, topRectangleX + boxSize, topRectangleY + boxSize, 0xBFFFFFFF);
             } else {
-                drawContext.fill(topRectangleX, topRectangleY, topRectangleX + topRectangleWidth, topRectangleY + topRectangleHeight, 0x80000000);
+                drawContext.fill(topRectangleX, topRectangleY, topRectangleX + boxSize, topRectangleY + boxSize, 0x80000000);
             }
 
-            // A
 
             int leftRectangleX = positionX + margin;
             int leftRectangleY = positionY + margin + boxSize + margin;
-            int leftRectangleWidth = boxSize;
-            int leftRectangleHeight = boxSize;
-            // x1,y2, x2,y2,color
 
             if(Minecraft.getInstance().options.keyLeft.isDown()){
-                drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + leftRectangleWidth, leftRectangleY + leftRectangleHeight, 0xBF000000);
+                drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + boxSize, leftRectangleY + boxSize, 0xBFFFFFFF);
             } else {
-                drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + leftRectangleWidth, leftRectangleY + leftRectangleHeight, 0x80000000);
+                drawContext.fill(leftRectangleX, leftRectangleY, leftRectangleX + boxSize, leftRectangleY + boxSize, 0x80000000);
             }
 
-
-            // S
 
             int middleRectangleX = positionX + margin + boxSize + margin;
             int middleRectangleY = positionY + margin + boxSize + margin;
-            int middleRectangleWidth = boxSize;
-            int middleRectangleHeight = boxSize;
-            // x1,y2, x2,y2,color
 
             if(Minecraft.getInstance().options.keyDown.isDown()){
-                drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + middleRectangleWidth, middleRectangleY + middleRectangleHeight, 0xBF000000);
+                drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + boxSize, middleRectangleY + boxSize, 0xBFFFFFFF);
             } else {
-                drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + middleRectangleWidth, middleRectangleY + middleRectangleHeight, 0x80000000);
+                drawContext.fill(middleRectangleX, middleRectangleY, middleRectangleX + boxSize, middleRectangleY + boxSize, 0x80000000);
             }
 
 
-            // D
-
             int rightRectangleX = positionX + margin + boxSize + margin + boxSize + margin;
             int rightRectangleY = positionY + margin + boxSize + margin;
-            int rightRectangleWidth = boxSize;
-            int rightRectangleHeight = boxSize;
-            // x1,y2, x2,y2,color
 
 
             if(Minecraft.getInstance().options.keyRight.isDown()){
-                drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + rightRectangleWidth, rightRectangleY + rightRectangleHeight, 0xBF000000);
+                drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + boxSize, rightRectangleY + boxSize, 0xBFFFFFFF);
             } else {
-                drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + rightRectangleWidth, rightRectangleY + rightRectangleHeight, 0x80000000);
+                drawContext.fill(rightRectangleX, rightRectangleY, rightRectangleX + boxSize, rightRectangleY + boxSize, 0x80000000);
             }
 
 
